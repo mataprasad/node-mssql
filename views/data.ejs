@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>EMPNO</th>
+                    <th>ENAME</th>
+                    <th>JOB</th>
+                    <th>MGR</th>
+                    <th>HIREDATE</th>
+                    <th>SAL</th>
+                    <th>COMM</th>
+                    <th>DEPTNO</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i=0;i<model.length;i++){ %>
+                    <tr>
+                        <td>
+                            <%=model[i].EMPNO %>
+                        </td>
+                        <td>
+                            <%=model[i].ENAME %>
+                        </td>
+                        <td>
+                            <%=model[i].JOB %>
+                        </td>
+                        <td>
+                            <%=model[i].MGR %>
+                        </td>
+                        <td>
+                            <%=model[i].HIREDATE %>
+                        </td>
+                        <td>
+                            <%=model[i].SAL %>
+                        </td>
+                        <td>
+                            <%=model[i].COMM %>
+                        </td>
+                        <td>
+                            <%=model[i].DEPTNO %>
+                        </td>
+                    </tr>
+                    <% } %>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>
