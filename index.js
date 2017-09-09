@@ -21,9 +21,11 @@ app.get("/", function(req, res) {
         return pool.request()
             .query('select * from emp;');
     }).then(result => {
+        sql.close();
         res.render("data", { model: result.recordset });
     }).catch(err => {
         console.dir(err);
+        sql.close();
     });
 });
 
